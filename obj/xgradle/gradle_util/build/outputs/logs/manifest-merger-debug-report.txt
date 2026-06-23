@@ -1,0 +1,27 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml:1:39-119
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml:1:39-119
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml:1:39-119
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml:1:39-119
+	package
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml:1:49-107
+application
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml reason: application injection requested
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	android:extractNativeLibs
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/AndroidManifest.xml

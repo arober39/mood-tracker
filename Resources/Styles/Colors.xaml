@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Tend palette: warm off-white surface, charcoal ink, hairline neutrals. -->
+    <Color x:Key="Surface">#FAF8F4</Color>
+    <Color x:Key="SurfaceMuted">#F2EFE8</Color>
+    <Color x:Key="Ink">#2A2823</Color>
+    <Color x:Key="InkMuted">#6F6A60</Color>
+    <Color x:Key="Hairline">#E6E2D8</Color>
+    <Color x:Key="CardBackground">#FFFFFF</Color>
+
+    <!-- 5-step mood scale (low-chroma pastels) -->
+    <Color x:Key="Mood1">#A8B8C9</Color>
+    <Color x:Key="Mood2">#B6AECC</Color>
+    <Color x:Key="Mood3">#B7CDB3</Color>
+    <Color x:Key="Mood4">#D4C896</Color>
+    <Color x:Key="Mood5">#E8B898</Color>
+
+    <!-- Keep MAUI's expected keys mapped to Tend tokens so the default Styles.xaml keeps building. -->
+    <Color x:Key="Primary">#2A2823</Color>
+    <Color x:Key="PrimaryDark">#FAF8F4</Color>
+    <Color x:Key="PrimaryDarkText">#FAF8F4</Color>
+    <Color x:Key="Secondary">#F2EFE8</Color>
+    <Color x:Key="SecondaryDarkText">#E6E2D8</Color>
+    <Color x:Key="Tertiary">#B7CDB3</Color>
+
+    <Color x:Key="White">White</Color>
+    <Color x:Key="Black">Black</Color>
+    <Color x:Key="Magenta">#D600AA</Color>
+    <Color x:Key="MidnightBlue">#190649</Color>
+    <Color x:Key="OffBlack">#1f1f1f</Color>
+
+    <Color x:Key="Gray100">#F2EFE8</Color>
+    <Color x:Key="Gray200">#E6E2D8</Color>
+    <Color x:Key="Gray300">#CFCABE</Color>
+    <Color x:Key="Gray400">#A8A296</Color>
+    <Color x:Key="Gray500">#6F6A60</Color>
+    <Color x:Key="Gray600">#4A463E</Color>
+    <Color x:Key="Gray900">#2A2823</Color>
+    <Color x:Key="Gray950">#1A1815</Color>
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
+    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
+    <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
+
+    <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}"/>
+    <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}"/>
+    <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}"/>
+    <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}"/>
+    <SolidColorBrush x:Key="Gray500Brush" Color="{StaticResource Gray500}"/>
+    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
+    <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
+    <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource Surface}"/>
+    <SolidColorBrush x:Key="InkBrush" Color="{StaticResource Ink}"/>
+    <SolidColorBrush x:Key="HairlineBrush" Color="{StaticResource Hairline}"/>
+</ResourceDictionary>

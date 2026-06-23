@@ -1,0 +1,8 @@
+<api type="debug" assembly-name="LaunchDarkly.ClientSdk" mvid="cea69858478844e283ffd1b0d8f65f55">
+  <java-to-managed>
+    <entry java-name="crc64bf0fa723490fa319/BackgroundDetection_ActivityLifecycleCallbacks" managed-name="LaunchDarkly.Sdk.Client.PlatformSpecific.BackgroundDetection+ActivityLifecycleCallbacks, LaunchDarkly.ClientSdk" managed-type-token-id="33554558" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64bf0fa723490fa319/BackgroundDetection_ActivityLifecycleCallbacks" managed-name="LaunchDarkly.Sdk.Client.PlatformSpecific.BackgroundDetection+ActivityLifecycleCallbacks, LaunchDarkly.ClientSdk" managed-type-token-id="33554558" />
+  </managed-to-java>
+</api>

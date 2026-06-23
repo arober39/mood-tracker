@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:mood_tracker.ViewModels"
+             xmlns:ctrl="clr-namespace:mood_tracker.Controls"
+             x:Class="mood_tracker.Pages.TodayPage"
+             x:DataType="vm:TodayViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Surface}">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="24,72,24,24" Spacing="32">
+
+                <!-- Greeting + date -->
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="{Binding Greeting}" Style="{StaticResource HeadlineSerif}"/>
+                    <Label Text="{Binding DateLine}" Style="{StaticResource Eyebrow}"/>
+                </VerticalStackLayout>
+
+                <!-- Today status card -->
+                <Border Style="{StaticResource CardBorder}">
+                    <Grid ColumnDefinitions="80,*" ColumnSpacing="18" RowDefinitions="Auto">
+
+                        <!-- Empty state: muted hairline circle + CTA -->
+                        <Border Grid.Column="0"
+                                IsVisible="{Binding HasTodayEntry, Converter={StaticResource InvertedBool}}"
+                                BackgroundColor="{StaticResource SurfaceMuted}"
+                                StrokeThickness="0"
+                                WidthRequest="72" HeightRequest="72"
+                                StrokeShape="RoundRectangle 36"/>
+                        <VerticalStackLayout Grid.Column="1"
+                                             IsVisible="{Binding HasTodayEntry, Converter={StaticResource InvertedBool}}"
+                                             Spacing="6"
+                                             VerticalOptions="Center">
+                            <Label Text="TODAY" Style="{StaticResource Eyebrow}"/>
+                            <Label Text="How are you, really?" Style="{StaticResource TitleSerif}"/>
+                            <Label Text="A minute of noticing is enough." Style="{StaticResource BodyMuted}"/>
+                            <Button Text="Check in"
+                                    Command="{Binding CheckInCommand}"
+                                    BackgroundColor="{StaticResource Ink}"
+                                    TextColor="{StaticResource Surface}"
+                                    FontFamily="OpenSansSemibold"
+                                    CornerRadius="22"
+                                    HeightRequest="44"
+                                    HorizontalOptions="Start"
+                                    Padding="22,0"
+                                    Margin="0,6,0,0"/>
+                        </VerticalStackLayout>
+
+                        <!-- Logged state: orb + label + truncated note -->
+                        <ctrl:MoodOrbView Grid.Column="0"
+                                          IsVisible="{Binding HasTodayEntry}"
+                                          Score="{Binding TodayEntry.Score}"
+                                          OrbSize="72"
+                                          VerticalOptions="Center"/>
+                        <VerticalStackLayout Grid.Column="1"
+                                             IsVisible="{Binding HasTodayEntry}"
+                                             Spacing="4"
+                                             VerticalOptions="Center">
+                            <Label Text="TODAY" Style="{StaticResource Eyebrow}"/>
+                            <Label Text="{Binding TodayLabel}" Style="{StaticResource TitleSerif}"/>
+                            <Label Text="{Binding TodayEntry.Note}"
+                                   Style="{StaticResource BodyMuted}"
+                                   LineBreakMode="TailTruncation"
+                                   MaxLines="2"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <!-- This week strip -->
+                <VerticalStackLayout Spacing="14">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Grid.Column="0" Text="This week" Style="{StaticResource SectionTitle}"/>
+                        <Label Grid.Column="1" Text="{Binding WeeklyInsight}" Style="{StaticResource BodyMuted}" FontSize="13"/>
+                    </Grid>
+
+                    <CollectionView ItemsSource="{Binding Week}" HeightRequest="72">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="6"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="vm:DayDot">
+                                <Grid RowDefinitions="Auto,Auto" RowSpacing="6" WidthRequest="42">
+                                    <Label Grid.Row="0"
+                                           Text="{Binding Weekday}"
+                                           Style="{StaticResource Eyebrow}"
+                                           FontSize="10"
+                                           HorizontalTextAlignment="Center"/>
+                                    <Border Grid.Row="1"
+                                            WidthRequest="40" HeightRequest="40"
+                                            BackgroundColor="{Binding FillColor}"
+                                            StrokeThickness="0"
+                                            StrokeShape="RoundRectangle 20"
+                                            HorizontalOptions="Center">
+                                        <Label Text="{Binding DayNumber}"
+                                               TextColor="{Binding TextColor}"
+                                               FontFamily="OpenSansSemibold"
+                                               FontSize="13"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+
+                <!-- Recent reflections -->
+                <VerticalStackLayout Spacing="14">
+                    <Label Text="Recent reflections" Style="{StaticResource SectionTitle}"/>
+                    <CollectionView ItemsSource="{Binding Reflections}"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding OpenEntryCommand}"
+                                    SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="vm:ReflectionRow">
+                                <Grid Padding="0,14"
+                                      ColumnDefinitions="48,*"
+                                      ColumnSpacing="14"
+                                      RowDefinitions="Auto,Auto,Auto"
+                                      RowSpacing="2">
+                                    <Border Grid.Column="0" Grid.RowSpan="3"
+                                            WidthRequest="40" HeightRequest="40"
+                                            BackgroundColor="{Binding Color}"
+                                            StrokeThickness="0"
+                                            StrokeShape="RoundRectangle 20"
+                                            VerticalOptions="Start"/>
+                                    <Grid Grid.Column="1" Grid.Row="0" ColumnDefinitions="*,Auto">
+                                        <Label Grid.Column="0"
+                                               Text="{Binding Label}"
+                                               FontFamily="OpenSansSemibold"
+                                               FontSize="15"/>
+                                        <Label Grid.Column="1"
+                                               Text="{Binding DateDisplay}"
+                                               Style="{StaticResource BodyMuted}"
+                                               FontSize="13"/>
+                                    </Grid>
+                                    <Label Grid.Column="1" Grid.Row="1"
+                                           Text="{Binding Note}"
+                                           Style="{StaticResource BodyMuted}"
+                                           LineBreakMode="TailTruncation"
+                                           MaxLines="2"/>
+                                    <BoxView Grid.Column="1" Grid.Row="2"
+                                             HeightRequest="1"
+                                             Color="{StaticResource Hairline}"
+                                             Margin="0,14,0,0"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Floating + check-in action -->
+        <Border Grid.Row="0"
+                BackgroundColor="{StaticResource Ink}"
+                StrokeThickness="0"
+                WidthRequest="60" HeightRequest="60"
+                StrokeShape="RoundRectangle 30"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Margin="0,0,0,16">
+            <Label Text="+"
+                   TextColor="{StaticResource Surface}"
+                   FontSize="30"
+                   FontFamily="OpenSansSemibold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CheckInCommand}"/>
+            </Border.GestureRecognizers>
+        </Border>
+    </Grid>
+</ContentPage>

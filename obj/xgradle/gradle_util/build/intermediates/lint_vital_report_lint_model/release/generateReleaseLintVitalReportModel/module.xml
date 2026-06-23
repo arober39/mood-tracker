@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util"
+    name=":gradle_util"
+    type="APP"
+    maven="gradle_util:gradle_util:unspecified"
+    agpVersion="8.4.1"
+    buildFolder="build"
+    bootClassPath="/Users/alexisroberson/Library/Android/sdk/platforms/android-34/android.jar:/Users/alexisroberson/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

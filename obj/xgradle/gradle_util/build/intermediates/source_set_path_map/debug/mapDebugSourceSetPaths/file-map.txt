@@ -1,0 +1,7 @@
+tech.tuyen_vuduc.gradle_util-pngs-0 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/generated/res/pngs/debug
+tech.tuyen_vuduc.gradle_util-resValues-1 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/generated/res/resValues/debug
+tech.tuyen_vuduc.gradle_util-packageDebugResources-2 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+tech.tuyen_vuduc.gradle_util-packageDebugResources-3 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+tech.tuyen_vuduc.gradle_util-debug-4 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/intermediates/merged_res/debug/mergeDebugResources
+tech.tuyen_vuduc.gradle_util-debug-5 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/debug/res
+tech.tuyen_vuduc.gradle_util-main-6 /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/src/main/res

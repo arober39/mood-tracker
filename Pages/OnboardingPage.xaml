@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:mood_tracker.ViewModels"
+             x:Class="mood_tracker.Pages.OnboardingPage"
+             x:DataType="vm:OnboardingViewModel"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource Surface}">
+
+    <Grid Padding="32,72,32,40" RowDefinitions="*,Auto,Auto,Auto">
+
+        <!-- Three softly overlapping pastel orbs (decorative) -->
+        <Grid Grid.Row="0" HeightRequest="220" VerticalOptions="Center" HorizontalOptions="Center">
+            <Border BackgroundColor="{StaticResource Mood5}"
+                    StrokeThickness="0"
+                    Opacity="0.85"
+                    WidthRequest="130" HeightRequest="130"
+                    StrokeShape="RoundRectangle 65"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    TranslationX="0"
+                    TranslationY="0"/>
+            <Border BackgroundColor="{StaticResource Mood2}"
+                    StrokeThickness="0"
+                    Opacity="0.85"
+                    WidthRequest="115" HeightRequest="115"
+                    StrokeShape="RoundRectangle 60"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    TranslationX="0"
+                    TranslationY="20"/>
+            <Border BackgroundColor="{StaticResource Mood3}"
+                    StrokeThickness="0"
+                    Opacity="0.85"
+                    WidthRequest="140" HeightRequest="140"
+                    StrokeShape="RoundRectangle 70"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    TranslationY="0"/>
+        </Grid>
+
+        <Label Grid.Row="1"
+               Text="Tend"
+               Style="{StaticResource DisplaySerif}"
+               HorizontalOptions="Center"
+               Margin="0,8,0,16"/>
+
+        <Label Grid.Row="2"
+               Text="A quiet check-in with yourself —&#10;even on the fullest days."
+               Style="{StaticResource BodyMuted}"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               Margin="0,0,0,40"/>
+
+        <VerticalStackLayout Grid.Row="3" Spacing="14">
+            <Button Text="Begin"
+                    Command="{Binding BeginCommand}"
+                    BackgroundColor="{StaticResource Ink}"
+                    TextColor="{StaticResource Surface}"
+                    FontFamily="OpenSansSemibold"
+                    FontSize="16"
+                    CornerRadius="28"
+                    HeightRequest="56"/>
+            <Label Text="Less than a minute a day."
+                   Style="{StaticResource BodyMuted}"
+                   FontSize="13"
+                   HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

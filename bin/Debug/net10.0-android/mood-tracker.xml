@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>mood-tracker</name>
+    </assembly>
+    <members>
+        <member name="T:mood_tracker.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:mood_tracker.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:mood_tracker.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="T:mood_tracker.ViewModels.CheckInViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.Step">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.step"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.SelectedScore">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.selectedScore"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.Note">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.note"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.PromptHeadline">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.promptHeadline"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.PromptSubtitle">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.promptSubtitle"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.ContinueLabel">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.continueLabel"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.TintColor">
+            <inheritdoc cref="F:mood_tracker.ViewModels.CheckInViewModel.tintColor"/>
+        </member>
+        <member name="M:mood_tracker.ViewModels.CheckInViewModel.OnStepChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:mood_tracker.ViewModels.CheckInViewModel.Step"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:mood_tracker.ViewModels.CheckInViewModel.Step"/> is changed.</remarks>
+        </member>
+        <member name="M:mood_tracker.ViewModels.CheckInViewModel.OnSelectedScoreChanged(mood_tracker.Models.MoodScore)">
+            <summary>Executes the logic for when <see cref="P:mood_tracker.ViewModels.CheckInViewModel.SelectedScore"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:mood_tracker.ViewModels.CheckInViewModel.SelectedScore"/> is changed.</remarks>
+        </member>
+        <member name="F:mood_tracker.ViewModels.CheckInViewModel.selectScoreCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.CheckInViewModel.SelectScoreCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.SelectScoreCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:mood_tracker.ViewModels.CheckInViewModel.SelectScore(mood_tracker.ViewModels.MoodOption)"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.CheckInViewModel.toggleFeelingCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.CheckInViewModel.ToggleFeelingCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.ToggleFeelingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:mood_tracker.ViewModels.CheckInViewModel.ToggleFeeling(mood_tracker.ViewModels.FeelingChip)"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.CheckInViewModel.continueCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.CheckInViewModel.ContinueCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.ContinueCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.CheckInViewModel.ContinueAsync"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.CheckInViewModel.backCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.CheckInViewModel.BackCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.BackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.CheckInViewModel.BackAsync"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.CheckInViewModel.closeCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.CheckInViewModel.CloseCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.CheckInViewModel.CloseCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.CheckInViewModel.CloseAsync"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.ViewModels.EntryDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Date">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.date"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Entry">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.entry"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Weekday">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.weekday"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.DateLine">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.dateLine"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Label">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.label"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Time">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.time"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Note">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.note"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.HasNote">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.hasNote"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.Score">
+            <inheritdoc cref="F:mood_tracker.ViewModels.EntryDetailViewModel.score"/>
+        </member>
+        <member name="M:mood_tracker.ViewModels.EntryDetailViewModel.OnDateChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:mood_tracker.ViewModels.EntryDetailViewModel.Date"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:mood_tracker.ViewModels.EntryDetailViewModel.Date"/> is changed.</remarks>
+        </member>
+        <member name="F:mood_tracker.ViewModels.EntryDetailViewModel.backCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.EntryDetailViewModel.BackCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.EntryDetailViewModel.BackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.EntryDetailViewModel.BackAsync"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.ViewModels.FeelingChip">
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.FeelingChip.IsSelected">
+            <inheritdoc cref="F:mood_tracker.ViewModels.FeelingChip.isSelected"/>
+        </member>
+        <member name="M:mood_tracker.ViewModels.FeelingChip.OnIsSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:mood_tracker.ViewModels.FeelingChip.IsSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:mood_tracker.ViewModels.FeelingChip.IsSelected"/> is changed.</remarks>
+        </member>
+        <member name="T:mood_tracker.ViewModels.HistoryViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.MonthLabel">
+            <inheritdoc cref="F:mood_tracker.ViewModels.HistoryViewModel.monthLabel"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.Year">
+            <inheritdoc cref="F:mood_tracker.ViewModels.HistoryViewModel.year"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.Month">
+            <inheritdoc cref="F:mood_tracker.ViewModels.HistoryViewModel.month"/>
+        </member>
+        <member name="F:mood_tracker.ViewModels.HistoryViewModel.prevMonthCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.HistoryViewModel.PrevMonthCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.PrevMonthCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.HistoryViewModel.PrevMonth"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.HistoryViewModel.nextMonthCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.HistoryViewModel.NextMonthCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.NextMonthCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.HistoryViewModel.NextMonth"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.HistoryViewModel.openCellCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.HistoryViewModel.OpenCellCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.HistoryViewModel.OpenCellCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:mood_tracker.ViewModels.HistoryViewModel.OpenCellAsync(mood_tracker.ViewModels.CalendarCell)"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.LoginViewModel.Username">
+            <inheritdoc cref="F:mood_tracker.ViewModels.LoginViewModel.username"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:mood_tracker.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="F:mood_tracker.ViewModels.LoginViewModel.signInCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.LoginViewModel.SignInCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.LoginViewModel.SignInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.LoginViewModel.SignInAsync"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.ViewModels.OnboardingViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:mood_tracker.ViewModels.OnboardingViewModel.beginCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.OnboardingViewModel.BeginCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.OnboardingViewModel.BeginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.OnboardingViewModel.BeginAsync"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.ViewModels.TodayViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.Greeting">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.greeting"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.DateLine">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.dateLine"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.HasTodayEntry">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.hasTodayEntry"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.TodayEntry">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.todayEntry"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.WeeklyInsight">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.weeklyInsight"/>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.TodayLabel">
+            <inheritdoc cref="F:mood_tracker.ViewModels.TodayViewModel.todayLabel"/>
+        </member>
+        <member name="F:mood_tracker.ViewModels.TodayViewModel.checkInCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.TodayViewModel.CheckInCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.CheckInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:mood_tracker.ViewModels.TodayViewModel.CheckInAsync"/>.</summary>
+        </member>
+        <member name="F:mood_tracker.ViewModels.TodayViewModel.openEntryCommand">
+            <summary>The backing field for <see cref="P:mood_tracker.ViewModels.TodayViewModel.OpenEntryCommand"/>.</summary>
+        </member>
+        <member name="P:mood_tracker.ViewModels.TodayViewModel.OpenEntryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:mood_tracker.ViewModels.TodayViewModel.OpenEntryAsync(mood_tracker.ViewModels.ReflectionRow)"/>.</summary>
+        </member>
+        <member name="T:mood_tracker.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Step">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Step" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedScore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Note">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Note" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PromptHeadline">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PromptHeadline" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PromptSubtitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PromptSubtitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ContinueLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ContinueLabel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TintColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TintColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Entry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Entry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Weekday">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Weekday" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateLine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateLine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Label">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Label" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasNote">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasNote" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MonthLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MonthLabel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Month">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Month" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Greeting">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Greeting" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasTodayEntry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasTodayEntry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TodayEntry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TodayEntry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WeeklyInsight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WeeklyInsight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TodayLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TodayLabel" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Step">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Step" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedScore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Note">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Note" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PromptHeadline">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PromptHeadline" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PromptSubtitle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PromptSubtitle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ContinueLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ContinueLabel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TintColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TintColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Entry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Entry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Weekday">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Weekday" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateLine">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateLine" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Label">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Label" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasNote">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasNote" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MonthLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MonthLabel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Month">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Month" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Greeting">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Greeting" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasTodayEntry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasTodayEntry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TodayEntry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TodayEntry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WeeklyInsight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WeeklyInsight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TodayLabel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TodayLabel" generated properties.</summary>
+        </member>
+    </members>
+</doc>

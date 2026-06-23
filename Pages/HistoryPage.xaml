@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:mood_tracker.ViewModels"
+             x:Class="mood_tracker.Pages.HistoryPage"
+             x:DataType="vm:HistoryViewModel"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Surface}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,72,24,40" Spacing="28">
+
+            <!-- Month header -->
+            <Grid ColumnDefinitions="44,*,44">
+                <Border Grid.Column="0"
+                        BackgroundColor="{StaticResource SurfaceMuted}"
+                        StrokeThickness="0"
+                        WidthRequest="36" HeightRequest="36"
+                        StrokeShape="RoundRectangle 18"
+                        HorizontalOptions="Start">
+                    <Label Text="‹" TextColor="{StaticResource Ink}" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PrevMonthCommand}"/>
+                    </Border.GestureRecognizers>
+                </Border>
+                <Label Grid.Column="1"
+                       Text="{Binding MonthLabel}"
+                       Style="{StaticResource TitleSerif}"
+                       FontSize="22"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Border Grid.Column="2"
+                        BackgroundColor="{StaticResource SurfaceMuted}"
+                        StrokeThickness="0"
+                        WidthRequest="36" HeightRequest="36"
+                        StrokeShape="RoundRectangle 18"
+                        HorizontalOptions="End">
+                    <Label Text="›" TextColor="{StaticResource Ink}" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NextMonthCommand}"/>
+                    </Border.GestureRecognizers>
+                </Border>
+            </Grid>
+
+            <!-- Weekday headers -->
+            <Grid ColumnDefinitions="*,*,*,*,*,*,*">
+                <Label Grid.Column="0" Text="M" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="1" Text="T" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="2" Text="W" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="3" Text="T" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="4" Text="F" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="5" Text="S" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+                <Label Grid.Column="6" Text="S" Style="{StaticResource Eyebrow}" HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Calendar grid: 7-wide -->
+            <CollectionView ItemsSource="{Binding Cells}"
+                            SelectionMode="Single"
+                            SelectionChangedCommand="{Binding OpenCellCommand}"
+                            SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="7" VerticalItemSpacing="10" HorizontalItemSpacing="4"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="vm:CalendarCell">
+                        <Grid HeightRequest="44">
+                            <Border IsVisible="{Binding HasDay}"
+                                    BackgroundColor="{Binding FillColor}"
+                                    StrokeThickness="0"
+                                    WidthRequest="38" HeightRequest="38"
+                                    StrokeShape="RoundRectangle 19"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                <Label Text="{Binding Day}"
+                                       TextColor="{Binding TextColor}"
+                                       FontFamily="OpenSansSemibold"
+                                       FontSize="13"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <BoxView HeightRequest="1" Color="{StaticResource Hairline}" Margin="0,8"/>
+
+            <!-- Mood scale legend -->
+            <VerticalStackLayout Spacing="14">
+                <Label Text="Mood scale" Style="{StaticResource SectionTitle}"/>
+                <CollectionView ItemsSource="{Binding Legend}" HeightRequest="64">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="22"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="vm:MoodLegendItem">
+                            <VerticalStackLayout WidthRequest="56" Spacing="6">
+                                <Border BackgroundColor="{Binding Color}"
+                                        StrokeThickness="0"
+                                        WidthRequest="22" HeightRequest="22"
+                                        StrokeShape="RoundRectangle 11"
+                                        HorizontalOptions="Start"/>
+                                <Label Text="{Binding Label}"
+                                       Style="{StaticResource BodyMuted}"
+                                       FontSize="12"/>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

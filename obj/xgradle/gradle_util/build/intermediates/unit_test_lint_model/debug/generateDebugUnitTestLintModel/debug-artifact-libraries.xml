@@ -1,0 +1,29 @@
+<libraries>
+  <library
+      name=":@@:gradle_util::debug"
+      project=":gradle_util"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.9.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.9.0/91448df39c558f7c6147b8bd8db01debe16e0cc1/kotlinx-serialization-core-jvm-1.9.0.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.9.0"/>
+  <library
+      name="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.9.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.9.0/aea6f7d49fe5c458f8963ee6d4bdaf4a459ab3e7/kotlinx-serialization-json-jvm-1.9.0.jar"
+      resolved="org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.9.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.0/f320478990d05e0cfaadd74f9619fd6027adbf37/kotlin-stdlib-jdk7-1.9.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:2.2.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.2.0/fdfc65fbc42fda253a26f61dac3c0aca335fae96/kotlin-stdlib-2.2.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:2.2.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.9.0/e000bd084353d84c9e888f6fb341dc1f5b79d948/kotlin-stdlib-jdk8-1.9.0.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="/Users/alexisroberson/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
+</libraries>

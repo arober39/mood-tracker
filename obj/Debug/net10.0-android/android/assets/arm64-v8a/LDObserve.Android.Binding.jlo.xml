@@ -1,0 +1,5 @@
+<api>
+  <acw-types partial-assembly-name="LDObserve.Android.Binding" module-name="LDObserve.Android.Binding.dll">
+    <type assembly-qualified-name="Com.Example.LDObserve.IBridgeLogger, LDObserve.Android.Binding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="com.example.LDObserve.BridgeLogger" java-key="com.example.LDObserve.BridgeLogger" managed-key="Com.Example.LDObserve.IBridgeLogger" partial-assembly-qualified-name="Com.Example.LDObserve.IBridgeLogger, LDObserve.Android.Binding" />
+  </acw-types>
+</api>

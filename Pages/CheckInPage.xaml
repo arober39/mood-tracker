@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:mood_tracker.ViewModels"
+             xmlns:ctrl="clr-namespace:mood_tracker.Controls"
+             x:Class="mood_tracker.Pages.CheckInPage"
+             x:DataType="vm:CheckInViewModel"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{Binding TintColor}">
+
+    <Grid RowDefinitions="Auto,*,Auto" Padding="24,72,24,32">
+
+        <!-- Header: close + step dots -->
+        <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto">
+            <Border Grid.Column="0"
+                    BackgroundColor="{StaticResource SurfaceMuted}"
+                    StrokeThickness="0"
+                    WidthRequest="36" HeightRequest="36"
+                    StrokeShape="RoundRectangle 18">
+                <Label Text="✕"
+                       TextColor="{StaticResource Ink}"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CloseCommand}"/>
+                </Border.GestureRecognizers>
+            </Border>
+            <HorizontalStackLayout Grid.Column="1" Spacing="6" HorizontalOptions="Center" VerticalOptions="Center">
+                <Border BackgroundColor="{StaticResource Ink}" StrokeThickness="0" WidthRequest="16" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
+                <Border BackgroundColor="{StaticResource Hairline}" StrokeThickness="0" WidthRequest="6" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
+                <Border BackgroundColor="{StaticResource Hairline}" StrokeThickness="0" WidthRequest="6" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
+            </HorizontalStackLayout>
+        </Grid>
+
+        <!-- Body -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="32" Padding="0,28,0,0">
+
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="{Binding PromptHeadline}"
+                           Style="{StaticResource HeadlineSerif}"
+                           FontSize="28"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding PromptSubtitle}"
+                           Style="{StaticResource BodyMuted}"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+                <!-- Step 0: Mood orb + scale -->
+                <VerticalStackLayout x:Name="StepMood" Spacing="28" HorizontalOptions="Center">
+                    <ctrl:MoodOrbView Score="{Binding SelectedScore}" OrbSize="200"/>
+                    <Label Text="{Binding SelectedScore, Converter={StaticResource ScoreToLabel}}"
+                           Style="{StaticResource TitleSerif}"
+                           FontSize="26"
+                           HorizontalTextAlignment="Center"/>
+                    <CollectionView ItemsSource="{Binding MoodOptions}"
+                                    HeightRequest="80"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding SelectScoreCommand}"
+                                    SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="18"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="vm:MoodOption">
+                                <VerticalStackLayout WidthRequest="56" Spacing="6">
+                                    <Border BackgroundColor="{Binding Color}"
+                                            StrokeThickness="0"
+                                            WidthRequest="34" HeightRequest="34"
+                                            StrokeShape="RoundRectangle 17"
+                                            HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Label}"
+                                           Style="{StaticResource BodyMuted}"
+                                           FontSize="12"
+                                           HorizontalTextAlignment="Center"/>
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+
+                <!-- Step 1: Feeling tags -->
+                <CollectionView x:Name="StepFeelings"
+                                ItemsSource="{Binding Feelings}"
+                                SelectionMode="Single"
+                                SelectionChangedCommand="{Binding ToggleFeelingCommand}"
+                                SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="vm:FeelingChip">
+                            <Border BackgroundColor="{Binding Background}"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 22"
+                                    Padding="20,12"
+                                    HorizontalOptions="Start">
+                                <Label Text="{Binding Name}"
+                                       TextColor="{Binding TextColor}"
+                                       FontFamily="OpenSansSemibold"
+                                       FontSize="14"/>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Step 2: Journal note -->
+                <Border x:Name="StepNote"
+                        Style="{StaticResource CardBorder}">
+                    <Editor Text="{Binding Note}"
+                            Placeholder="A line, a feeling, an image…"
+                            PlaceholderColor="{StaticResource InkMuted}"
+                            FontFamily="Georgia"
+                            FontSize="17"
+                            AutoSize="TextChanges"
+                            MinimumHeightRequest="180"
+                            BackgroundColor="Transparent"
+                            TextColor="{StaticResource Ink}"/>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Continue / Save -->
+        <Button Grid.Row="2"
+                Text="{Binding ContinueLabel}"
+                Command="{Binding ContinueCommand}"
+                BackgroundColor="{StaticResource Ink}"
+                TextColor="{StaticResource Surface}"
+                FontFamily="OpenSansSemibold"
+                FontSize="16"
+                CornerRadius="28"
+                HeightRequest="56"/>
+    </Grid>
+</ContentPage>

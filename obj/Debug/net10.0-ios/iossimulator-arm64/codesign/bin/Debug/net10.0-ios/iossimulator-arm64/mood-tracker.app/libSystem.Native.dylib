@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/bin/Debug/net10.0-ios/iossimulator-arm64/mood-tracker.app/libSystem.Native.dylib

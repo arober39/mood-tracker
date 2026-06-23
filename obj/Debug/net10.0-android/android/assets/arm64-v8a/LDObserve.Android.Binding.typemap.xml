@@ -1,0 +1,38 @@
+<api type="debug" assembly-name="LDObserve.Android.Binding" mvid="c3c5935acf704285a8e5b0d9743d5e9b">
+  <java-to-managed>
+    <entry java-name="com/example/LDObserve/BridgeLogger" managed-name="Com.Example.LDObserve.IBridgeLogger, LDObserve.Android.Binding" skip-in-java-to-managed="True" managed-type-token-id="33554436" />
+    <entry java-name="com/example/LDObserve/BridgeLogger" managed-name="Com.Example.LDObserve.IBridgeLoggerInvoker, LDObserve.Android.Binding" managed-type-token-id="33554437" />
+    <entry java-name="com/example/LDObserve/SystemOutBridgeLogger" managed-name="Com.Example.LDObserve.SystemOutBridgeLogger, LDObserve.Android.Binding" managed-type-token-id="33554438" />
+    <entry java-name="com/launchdarkly/LDNative/LDMasking" managed-name="LDObserveAndroid.LDMasking, LDObserve.Android.Binding" managed-type-token-id="33554440" />
+    <entry java-name="com/launchdarkly/LDNative/LDObservabilityOptions" managed-name="LDObserveAndroid.LDObservabilityOptions, LDObserve.Android.Binding" managed-type-token-id="33554441" />
+    <entry java-name="com/launchdarkly/LDNative/LDObserveBridgeAdapter" managed-name="LDObserveAndroid.LDObserveBridgeAdapter, LDObserve.Android.Binding" managed-type-token-id="33554442" />
+    <entry java-name="com/launchdarkly/LDNative/LDObserveBridgeAdapter$Companion" managed-name="LDObserveAndroid.LDObserveBridgeAdapter+Companion, LDObserve.Android.Binding" managed-type-token-id="33554452" />
+    <entry java-name="com/launchdarkly/LDNative/LDPrivacyOptions" managed-name="LDObserveAndroid.LDPrivacyOptions, LDObserve.Android.Binding" managed-type-token-id="33554443" />
+    <entry java-name="com/launchdarkly/LDNative/LDSessionReplayOptions" managed-name="LDObserveAndroid.LDSessionReplayOptions, LDObserve.Android.Binding" managed-type-token-id="33554444" />
+    <entry java-name="com/launchdarkly/LDNative/ObservabilityBridge" managed-name="LDObserveAndroid.ObservabilityBridge, LDObserve.Android.Binding" managed-type-token-id="33554445" />
+    <entry java-name="com/launchdarkly/LDNative/ObservabilityBridge$Companion" managed-name="LDObserveAndroid.ObservabilityBridge+Companion, LDObserve.Android.Binding" managed-type-token-id="33554453" />
+    <entry java-name="com/launchdarkly/LDNative/RealLogger" managed-name="LDObserveAndroid.RealLogger, LDObserve.Android.Binding" managed-type-token-id="33554446" />
+    <entry java-name="com/launchdarkly/LDNative/RealObservabilityHookProxy" managed-name="LDObserveAndroid.RealObservabilityHookProxy, LDObserve.Android.Binding" managed-type-token-id="33554447" />
+    <entry java-name="com/launchdarkly/LDNative/RealSessionReplayHookProxy" managed-name="LDObserveAndroid.RealSessionReplayHookProxy, LDObserve.Android.Binding" managed-type-token-id="33554448" />
+    <entry java-name="com/launchdarkly/LDNative/RealSpanBuilder" managed-name="LDObserveAndroid.RealSpanBuilder, LDObserve.Android.Binding" managed-type-token-id="33554449" />
+    <entry java-name="com/launchdarkly/LDNative/RealTracer" managed-name="LDObserveAndroid.RealTracer, LDObserve.Android.Binding" managed-type-token-id="33554450" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="com/example/LDObserve/BridgeLogger" managed-name="Com.Example.LDObserve.IBridgeLogger, LDObserve.Android.Binding" skip-in-java-to-managed="True" managed-type-token-id="33554436" />
+    <entry java-name="com/example/LDObserve/BridgeLogger" managed-name="Com.Example.LDObserve.IBridgeLoggerInvoker, LDObserve.Android.Binding" managed-type-token-id="33554437" />
+    <entry java-name="com/example/LDObserve/SystemOutBridgeLogger" managed-name="Com.Example.LDObserve.SystemOutBridgeLogger, LDObserve.Android.Binding" managed-type-token-id="33554438" />
+    <entry java-name="com/launchdarkly/LDNative/LDMasking" managed-name="LDObserveAndroid.LDMasking, LDObserve.Android.Binding" managed-type-token-id="33554440" />
+    <entry java-name="com/launchdarkly/LDNative/LDObservabilityOptions" managed-name="LDObserveAndroid.LDObservabilityOptions, LDObserve.Android.Binding" managed-type-token-id="33554441" />
+    <entry java-name="com/launchdarkly/LDNative/LDObserveBridgeAdapter" managed-name="LDObserveAndroid.LDObserveBridgeAdapter, LDObserve.Android.Binding" managed-type-token-id="33554442" />
+    <entry java-name="com/launchdarkly/LDNative/LDObserveBridgeAdapter$Companion" managed-name="LDObserveAndroid.LDObserveBridgeAdapter+Companion, LDObserve.Android.Binding" managed-type-token-id="33554452" />
+    <entry java-name="com/launchdarkly/LDNative/LDPrivacyOptions" managed-name="LDObserveAndroid.LDPrivacyOptions, LDObserve.Android.Binding" managed-type-token-id="33554443" />
+    <entry java-name="com/launchdarkly/LDNative/LDSessionReplayOptions" managed-name="LDObserveAndroid.LDSessionReplayOptions, LDObserve.Android.Binding" managed-type-token-id="33554444" />
+    <entry java-name="com/launchdarkly/LDNative/ObservabilityBridge" managed-name="LDObserveAndroid.ObservabilityBridge, LDObserve.Android.Binding" managed-type-token-id="33554445" />
+    <entry java-name="com/launchdarkly/LDNative/ObservabilityBridge$Companion" managed-name="LDObserveAndroid.ObservabilityBridge+Companion, LDObserve.Android.Binding" managed-type-token-id="33554453" />
+    <entry java-name="com/launchdarkly/LDNative/RealLogger" managed-name="LDObserveAndroid.RealLogger, LDObserve.Android.Binding" managed-type-token-id="33554446" />
+    <entry java-name="com/launchdarkly/LDNative/RealObservabilityHookProxy" managed-name="LDObserveAndroid.RealObservabilityHookProxy, LDObserve.Android.Binding" managed-type-token-id="33554447" />
+    <entry java-name="com/launchdarkly/LDNative/RealSessionReplayHookProxy" managed-name="LDObserveAndroid.RealSessionReplayHookProxy, LDObserve.Android.Binding" managed-type-token-id="33554448" />
+    <entry java-name="com/launchdarkly/LDNative/RealSpanBuilder" managed-name="LDObserveAndroid.RealSpanBuilder, LDObserve.Android.Binding" managed-type-token-id="33554449" />
+    <entry java-name="com/launchdarkly/LDNative/RealTracer" managed-name="LDObserveAndroid.RealTracer, LDObserve.Android.Binding" managed-type-token-id="33554450" />
+  </managed-to-java>
+</api>

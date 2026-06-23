@@ -1,0 +1,15 @@
+<api>
+  <jcw-types>
+    <type name="MainActivity" package="crc647b1606fe0bb43467" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiAppCompatActivity" partial_assembly_qualified_name="mood_tracker.MainActivity, mood-tracker">
+      <constructors>
+        <constructor name="MainActivity" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
+        <constructor name="MainActivity" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+      </constructors>
+    </type>
+    <type name="MainApplication" package="crc647b1606fe0bb43467" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiApplication" is_application="True" partial_assembly_qualified_name="mood_tracker.MainApplication, mood-tracker" application_constructor="MainApplication" />
+  </jcw-types>
+  <acw-types partial-assembly-name="mood-tracker" module-name="mood-tracker.dll">
+    <type assembly-qualified-name="mood_tracker.MainActivity, mood-tracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="mood_tracker.MainActivity" java-key="crc647b1606fe0bb43467.MainActivity" managed-key="mood_tracker.MainActivity" partial-assembly-qualified-name="mood_tracker.MainActivity, mood-tracker" />
+    <type assembly-qualified-name="mood_tracker.MainApplication, mood-tracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="mood_tracker.MainApplication" java-key="crc647b1606fe0bb43467.MainApplication" managed-key="mood_tracker.MainApplication" partial-assembly-qualified-name="mood_tracker.MainApplication, mood-tracker" />
+  </acw-types>
+</api>

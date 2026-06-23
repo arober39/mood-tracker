@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="mood-tracker" mvid="b18bf87c1f104988a0474fb9a7b0441a">
+  <java-to-managed>
+    <entry java-name="crc647b1606fe0bb43467/MainActivity" managed-name="mood_tracker.MainActivity, mood-tracker" managed-type-token-id="33554442" />
+    <entry java-name="crc647b1606fe0bb43467/MainApplication" managed-name="mood_tracker.MainApplication, mood-tracker" managed-type-token-id="33554443" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc647b1606fe0bb43467/MainActivity" managed-name="mood_tracker.MainActivity, mood-tracker" managed-type-token-id="33554442" />
+    <entry java-name="crc647b1606fe0bb43467/MainApplication" managed-name="mood_tracker.MainApplication, mood-tracker" managed-type-token-id="33554443" />
+  </managed-to-java>
+</api>

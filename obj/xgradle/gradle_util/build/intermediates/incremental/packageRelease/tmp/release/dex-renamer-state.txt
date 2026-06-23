@@ -1,0 +1,4 @@
+#Mon Jun 22 15:04:18 CDT 2026
+base.0=/Users/alexisroberson/Documents/Claude_Code_Projects/mood-tracker/obj/xgradle/gradle_util/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
