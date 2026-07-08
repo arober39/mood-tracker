@@ -27,15 +27,16 @@
                     <TapGestureRecognizer Command="{Binding CloseCommand}"/>
                 </Border.GestureRecognizers>
             </Border>
-            <HorizontalStackLayout Grid.Column="1" Spacing="6" HorizontalOptions="Center" VerticalOptions="Center">
+            <HorizontalStackLayout Grid.Column="1" Spacing="6" HorizontalOptions="Center" VerticalOptions="Center"
+                                    IsVisible="{Binding UseStepped}">
                 <Border BackgroundColor="{StaticResource Ink}" StrokeThickness="0" WidthRequest="16" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
                 <Border BackgroundColor="{StaticResource Hairline}" StrokeThickness="0" WidthRequest="6" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
                 <Border BackgroundColor="{StaticResource Hairline}" StrokeThickness="0" WidthRequest="6" HeightRequest="6" StrokeShape="RoundRectangle 3"/>
             </HorizontalStackLayout>
         </Grid>
 
-        <!-- Body -->
-        <ScrollView Grid.Row="1">
+        <!-- Body: control (stepped) -->
+        <ScrollView Grid.Row="1" IsVisible="{Binding UseStepped}">
             <VerticalStackLayout Spacing="32" Padding="0,28,0,0">
 
                 <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
@@ -116,6 +117,92 @@
                             FontSize="17"
                             AutoSize="TextChanges"
                             MinimumHeightRequest="180"
+                            BackgroundColor="Transparent"
+                            TextColor="{StaticResource Ink}"/>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Body: treatment (single-page) -->
+        <ScrollView Grid.Row="1" IsVisible="{Binding UseSinglePage}">
+            <VerticalStackLayout Spacing="24" Padding="0,28,0,0">
+
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label Text="{Binding PromptHeadline}"
+                           Style="{StaticResource HeadlineSerif}"
+                           FontSize="28"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding PromptSubtitle}"
+                           Style="{StaticResource BodyMuted}"
+                           HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+                <!-- Mood orb + horizontal scale -->
+                <VerticalStackLayout Spacing="16" HorizontalOptions="Center">
+                    <ctrl:MoodOrbView Score="{Binding SelectedScore}" OrbSize="140"/>
+                    <Label Text="{Binding SelectedScore, Converter={StaticResource ScoreToLabel}}"
+                           Style="{StaticResource TitleSerif}"
+                           FontSize="22"
+                           HorizontalTextAlignment="Center"/>
+                    <CollectionView ItemsSource="{Binding MoodOptions}"
+                                    HeightRequest="68"
+                                    SelectionMode="Single"
+                                    SelectionChangedCommand="{Binding SelectScoreCommand}"
+                                    SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="14"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="vm:MoodOption">
+                                <VerticalStackLayout WidthRequest="48" Spacing="6">
+                                    <Border BackgroundColor="{Binding Color}"
+                                            StrokeThickness="0"
+                                            WidthRequest="28" HeightRequest="28"
+                                            StrokeShape="RoundRectangle 14"
+                                            HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Label}"
+                                           Style="{StaticResource BodyMuted}"
+                                           FontSize="11"
+                                           HorizontalTextAlignment="Center"/>
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+
+                <!-- Feelings, wrapped -->
+                <CollectionView ItemsSource="{Binding Feelings}"
+                                SelectionMode="Single"
+                                SelectionChangedCommand="{Binding ToggleFeelingCommand}"
+                                SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="8"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="vm:FeelingChip">
+                            <Border BackgroundColor="{Binding Background}"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 18"
+                                    Padding="16,10"
+                                    HorizontalOptions="Start">
+                                <Label Text="{Binding Name}"
+                                       TextColor="{Binding TextColor}"
+                                       FontFamily="OpenSansSemibold"
+                                       FontSize="13"/>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Note -->
+                <Border Style="{StaticResource CardBorder}">
+                    <Editor Text="{Binding Note}"
+                            Placeholder="A line, a feeling, an image…"
+                            PlaceholderColor="{StaticResource InkMuted}"
+                            FontFamily="Georgia"
+                            FontSize="16"
+                            AutoSize="TextChanges"
+                            MinimumHeightRequest="100"
                             BackgroundColor="Transparent"
                             TextColor="{StaticResource Ink}"/>
                 </Border>

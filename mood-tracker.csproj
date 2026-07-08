@@ -48,6 +48,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<!-- Exclude the standalone simulation console project nested under sim/ -->
+		<Compile Remove="sim\**" />
+		<EmbeddedResource Remove="sim\**" />
+		<None Remove="sim\**" />
+		<MauiXaml Remove="sim\**" />
+		<MauiCss Remove="sim\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 

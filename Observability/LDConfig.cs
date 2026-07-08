@@ -11,4 +11,5 @@ public static class LDConfig
 
     // Feature flag keys. Create matching flags in your LaunchDarkly project.
     public const string UseBrokenEndpointFlag = "use-broken-endpoint";
+    public const string CheckInFlowV2Flag     = "checkin-flow-v2";
 }
